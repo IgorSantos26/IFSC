@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int opcao, num1, num2, num3;
+
+    printf("Digite a opcao (2, 3 ou 4): ");
+    scanf("%d", &opcao);
+    printf("Digite tres numeros (Num1, Num2, Num3): ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    if (opcao == 2)
+        printf("Resultado: %d\n", num1);
+    else if (opcao == 3)
+        printf("Resultado: %d\n", num2);
+    else if (opcao == 4)
+        printf("Resultado: %d\n", num3);
+    else
+        printf("Opcao invalida!\n");
+
+    return 0;
+}

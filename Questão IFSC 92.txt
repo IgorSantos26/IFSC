@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    float A = 0.0;
+
+    printf("Digite um valor inteiro positivo N: ");
+    scanf("%d", &N);
+
+    for (int i = 0; i <= N - 1; i++) {
+        A += (float)(N - i) / (i + 1);
+    }
+
+    printf("A = %.2f\n", A);
+    return 0;
+}

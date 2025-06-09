@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void operacao() {
+    int A, B;
+    printf("Digite A e B: ");
+    scanf("%d %d", &A, &B);
+    printf("A mod B = %d\n", A % B);
+}
+
+int main() {
+    // a) executa 10 vezes
+    for (int i = 0; i < 10; i++) operacao();
+
+    // b) não executa
+    for (int i = 0; i < 0; i++) operacao();
+
+    // c) 100 vezes usando duas estruturas
+    int cont = 0;
+    while (cont < 10) {
+        for (int j = 0; j < 10; j++) operacao();
+        cont++;
+    }
+
+    // d) N vezes
+    int N;
+    printf("Digite N: ");
+    scanf("%d", &N);
+    for (int i = 0; i < N; i++) operacao();
+
+    return 0;
+}

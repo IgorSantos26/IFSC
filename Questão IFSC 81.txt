@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    char letra;
+
+    printf("Digite uma letra: ");
+    scanf(" %c", &letra);
+
+    if ((letra >= 'A' && letra <= 'Z') || (letra >= 'a' && letra <= 'z')) {
+        switch(letra) {
+            case 'a': case 'e': case 'i': case 'o': case 'u':
+            case 'A': case 'E': case 'I': case 'O': case 'U':
+                printf("Vogal\n"); break;
+            default:
+                printf("Consoante\n");
+        }
+    } else {
+        printf("Caractere invalido.\n");
+    }
+
+    return 0;
+}

@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+void ordenar(float *x, float *y, float *z) {
+    float temp;
+    if (*x > *y) { temp = *x; *x = *y; *y = temp; }
+    if (*x > *z) { temp = *x; *x = *z; *z = temp; }
+    if (*y > *z) { temp = *y; *y = *z; *z = temp; }
+}
+
+int main() {
+    int I;
+    float A, B, C;
+
+    printf("Digite I (1, 2 ou 3): ");
+    scanf("%d", &I);
+    printf("Digite A, B e C: ");
+    scanf("%f %f %f", &A, &B, &C);
+
+    printf("Valores lidos: %.2f, %.2f, %.2f\n", A, B, C);
+
+    float a = A, b = B, c = C;
+
+    switch(I) {
+        case 1:
+            ordenar(&a, &b, &c);
+            printf("Ordem crescente: %.2f %.2f %.2f\n", a, b, c);
+            break;
+        case 2:
+            ordenar(&a, &b, &c);
+            printf("Ordem decrescente: %.2f %.2f %.2f\n", c, b, a);
+            break;
+        case 3:
+            if (A > B && A > C)
+                printf("%.2f %.2f %.2f\n", B, A, C);
+            else if (B > A && B > C)
+                printf("%.2f %.2f %.2f\n", A, B, C);
+            else
+                printf("%.2f %.2f %.2f\n", A, C, B);
+            break;
+        default:
+            printf("Opcao invalida.\n");
+    }
+
+    return 0;
+}

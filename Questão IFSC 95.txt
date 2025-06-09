@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int idade;
+    float altura, somaAltMenos170 = 0;
+    int contAltMenos170 = 0, somaIdadeMais20 = 0, contMais20 = 0;
+
+    for (int i = 0; i < 45; i++) {
+        printf("Aluno %d – idade e altura: ", i + 1);
+        scanf("%d %f", &idade, &altura);
+
+        if (altura < 1.70) {
+            somaAltMenos170 += idade;
+            contAltMenos170++;
+        }
+        if (idade > 20) {
+            somaIdadeMais20 += altura;
+            contMais20++;
+        }
+    }
+
+    if (contAltMenos170 > 0)
+        printf("Idade média (altura < 1.70m) = %.2f\n", somaAltMenos170 / contAltMenos170);
+    else
+        printf("Nenhum aluno com altura < 1.70m\n");
+
+    if (contMais20 > 0)
+        printf("Altura média (idade > 20) = %.2f\n", somaIdadeMais20 / contMais20);
+    else
+        printf("Nenhum aluno com idade > 20 anos\n");
+
+    return 0;
+}

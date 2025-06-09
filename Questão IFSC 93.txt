@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    unsigned long long total = 0, grãos = 1;
+
+    for (int i = 1; i <= 64; i++) {
+        total += grãos;
+        grãos *= 2;
+    }
+
+    printf("Total de grãos = %llu\n", total);
+    return 0;
+}

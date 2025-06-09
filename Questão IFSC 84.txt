@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int numeroConta;
+    char nome[100];
+    float saldo = 0.0, valor;
+    int operacao;
+
+    printf("Digite o numero da conta: ");
+    scanf("%d", &numeroConta);
+    printf("Digite o nome do titular: ");
+    scanf(" %[^\n]", nome);
+    printf("Digite o saldo inicial: ");
+    scanf("%f", &saldo);
+
+    printf("Escolha a operacao:\n1 - Deposito\n2 - Retirada\n");
+    scanf("%d", &operacao);
+
+    printf("Digite o valor da operacao: ");
+    scanf("%f", &valor);
+
+    if (operacao == 1) {
+        saldo += valor;
+    } else if (operacao == 2) {
+        if (valor > saldo) {
+            printf("Saldo insuficiente.\n");
+            return 1;
+        }
+        saldo -= valor;
+    } else {
+        printf("Operacao invalida.\n");
+        return 1;
+    }
+
+    printf("Conta: %d\nTitular: %s\nSaldo atualizado: R$ %.2f\n", numeroConta, nome, saldo);
+
+    return 0;
+}

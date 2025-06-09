@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int numero;
+    bool ehPar;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+
+    ehPar = (numero % 2 == 0);
+
+    if (ehPar)
+        printf("O numero e par: verdadeiro\n");
+    else
+        printf("O numero e par: falso\n");
+
+    return 0;
+}

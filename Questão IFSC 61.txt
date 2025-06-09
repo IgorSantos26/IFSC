@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    float n1, n2, n3, media;
+    int opcao;
+
+    printf("Digite as tres notas: ");
+    scanf("%f %f %f", &n1, &n2, &n3);
+
+    printf("Escolha o tipo de media:\n1 - Aritmetica\n2 - Ponderada (3, 3, 4)\nOpcao: ");
+    scanf("%d", &opcao);
+
+    if (opcao == 1)
+        media = (n1 + n2 + n3) / 3;
+    else if (opcao == 2)
+        media = (n1 * 3 + n2 * 3 + n3 * 4) / 10;
+    else {
+        printf("Opcao invalida\n");
+        return 1;
+    }
+
+    printf("Media: %.2f\n", media);
+
+    return 0;
+}
