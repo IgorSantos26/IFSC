@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float AREA, BASE, ALTURA;
+
+    // Entrada da base
+    printf("Digite o valor da base do triangulo: ");
+    scanf("%f", &BASE);
+
+    // Entrada da altura
+    printf("Digite o valor da altura do triangulo: ");
+    scanf("%f", &ALTURA);
+
+    // Cálculo da área
+    AREA = (BASE * ALTURA) / 2;
+
+    // Saída do resultado
+    printf("A area do triangulo é: %.2f\n", AREA);
+
+    return 0;
+}

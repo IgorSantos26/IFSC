@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int Int1, Int2, quociente, resto;
+
+    printf("Digite o primeiro numero inteiro (Int1): ");
+    scanf("%d", &Int1);
+
+    printf("Digite o segundo numero inteiro (Int2): ");
+    scanf("%d", &Int2);
+
+    quociente = Int1 / Int2;
+    resto = Int1 % Int2;
+
+    printf("Quociente da divisao: %d\n", quociente);
+    printf("Resto da divisao: %d\n", resto);
+
+    return 0;
+}

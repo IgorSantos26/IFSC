@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int qtd1, qtd2, qtd3;
+    float preco1 = 0.50f, preco2 = 0.60f, preco3 = 0.75f;
+    float total1, total2, total3;
+
+    printf("Quantidade vendida do picole tipo 1: ");
+    scanf("%d", &qtd1);
+
+    printf("Quantidade vendida do picole tipo 2: ");
+    scanf("%d", &qtd2);
+
+    printf("Quantidade vendida do picole tipo 3: ");
+    scanf("%d", &qtd3);
+
+    total1 = qtd1 * preco1;
+    total2 = qtd2 * preco2;
+    total3 = qtd3 * preco3;
+
+    printf("\nTipo 1: Quantidade = %d, Total arrecadado = R$ %.2f\n", qtd1, total1);
+    printf("Tipo 2: Quantidade = %d, Total arrecadado = R$ %.2f\n", qtd2, total2);
+    printf("Tipo 3: Quantidade = %d, Total arrecadado = R$ %.2f\n", qtd3, total3);
+
+    return 0;
+}

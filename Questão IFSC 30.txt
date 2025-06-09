@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int matricula, ano, semestre;
+
+    printf("Digite o numero de matricula (AASDDD): ");
+    scanf("%d", &matricula);
+
+    ano = matricula / 10000;          // dois primeiros dígitos (ano)
+    semestre = (matricula / 1000) % 10;  // terceiro dígito (semestre)
+
+    printf("Ano de matricula: %02d\n", ano);
+    printf("Semestre de matricula: %d\n", semestre);
+
+    return 0;
+}

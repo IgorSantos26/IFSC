@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char nome[50];
+    float portugues, matematica, conhecimentos, media;
+
+    printf("Digite o nome do candidato: ");
+    fgets(nome, sizeof(nome), stdin);
+    nome[strcspn(nome, "\n")] = '\0';  // Remove o '\n'
+
+    printf("Nota Portugues: ");
+    scanf("%f", &portugues);
+    printf("Nota Matematica: ");
+    scanf("%f", &matematica);
+    printf("Nota Conhecimentos Gerais: ");
+    scanf("%f", &conhecimentos);
+
+    media = (portugues + matematica + conhecimentos) / 3.0;
+
+    printf("\nNome: %s\n", nome);
+    printf("Notas: Portugues=%.2f, Matematica=%.2f, Conhecimentos=%.2f\n", portugues, matematica, conhecimentos);
+    printf("Media: %.2f\n", media);
+
+    if (media > 7.0 && portugues >= 5.0 && matematica >= 5.0 && conhecimentos >= 5.0) {
+        printf("Candidato aprovado\n");
+    } else {
+        printf("Candidato reprovado\n");
+    }
+
+    return 0;
+}

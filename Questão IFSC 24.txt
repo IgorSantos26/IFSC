@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    float velocidade_kmh, velocidade_ms;
+
+    printf("Digite a velocidade do veiculo em km/h: ");
+    scanf("%f", &velocidade_kmh);
+
+    // 1 km/h = 1000 m / 3600 s = 5/18 m/s
+    velocidade_ms = velocidade_kmh * 5.0 / 18.0;
+
+    printf("Velocidade em metros por segundo: %.2f m/s\n", velocidade_ms);
+
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+void imprime(const char* rotulo, bool valor) {
+    printf("%s: %s\n", rotulo, valor ? "VERDADEIRO" : "FALSO");
+}
+
+int main() {
+    // a) "mario" == "maria"
+    imprime("a) 'mario' = 'maria'", strcmp("mario", "maria") == 0);
+
+    // b) 2 + 4 == 6
+    imprime("b) 2 + 4 = 6", 2 + 4 == 6);
+
+    // c) 10 - 4 > 7
+    imprime("c) 10 - 4 > 7", 10 - 4 > 7);
+
+    // d) (2 * 3) > (3 * 2)
+    imprime("d) (2*3) > (3*2)", 2 * 3 > 3 * 2);
+
+    // e) não('a' > 'A')
+    imprime("e) não('a' > 'A')", !('a' > 'A'));
+
+    return 0;
+}

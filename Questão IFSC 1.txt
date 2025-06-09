@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a = (20 - 15) / 2;               // Inteiro
+    double b = 20 - 15 / 2.0;            // Real
+    double c = 2 * 5 / 20.0 + 30 / 15.0 * 2; // Real
+    double d = 2 * (5 / 20.0) + 30 / (15.0 * 2); // Real
+    int e = 23 / 4;                      // Inteiro (div)
+    int f = 23 % 4;                      // Inteiro (mod)
+    int g = 35 / 6 + 2;                  // Inteiro
+    int h = 35 / 6 - 2;                  // Inteiro
+    int i = (35 / 6) * 2;                // Inteiro
+    double j = sqrt(625);               // Real
+    int k = 20 * 20;                    // Inteiro (sqr)
+    double l = 2 + sqrt(21 / 5);        // Real (21 div 5 = 4)
+
+    // Impressão dos resultados com tipo
+    printf("a) %d (inteiro)\n", a);
+    printf("b) %.2f (real)\n", b);
+    printf("c) %.2f (real)\n", c);
+    printf("d) %.2f (real)\n", d);
+    printf("e) %d (inteiro)\n", e);
+    printf("f) %d (inteiro)\n", f);
+    printf("g) %d (inteiro)\n", g);
+    printf("h) %d (inteiro)\n", h);
+    printf("i) %d (inteiro)\n", i);
+    printf("j) %.2f (real)\n", j);
+    printf("k) %d (inteiro)\n", k);
+    printf("l) %.2f (real)\n", l);
+
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    char nomes[3][50];
+    float vendas[3], comissoes[3], total_vendas = 0;
+    int i;
+
+    for (i = 0; i < 3; i++) {
+        printf("Digite o nome do corretor %d: ", i+1);
+        scanf(" %[^\n]", nomes[i]);
+
+        printf("Digite o valor da venda do corretor %d: ", i+1);
+        scanf("%f", &vendas[i]);
+
+        if (vendas[i] > 50000) {
+            comissoes[i] = vendas[i] * 0.12f;
+        } else if (vendas[i] >= 30000) {
+            comissoes[i] = vendas[i] * 0.095f;
+        } else {
+            comissoes[i] = vendas[i] * 0.07f;
+        }
+
+        total_vendas += vendas[i];
+    }
+
+    printf("\nRelatorio de vendas:\n");
+    for (i = 0; i < 3; i++) {
+        printf("Corretor: %s, Venda: R$ %.2f, Comissao: R$ %.2f\n", nomes[i], vendas[i], comissoes[i]);
+    }
+    printf("Total de vendas da empresa: R$ %.2f\n", total_vendas);
+
+    return 0;
+}

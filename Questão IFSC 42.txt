@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    char nomes[4][50];
+    float precos[4], descontos[4], precosComDesconto[4];
+    float totalPagar = 0;
+    int i;
+
+    for (i = 0; i < 4; i++) {
+        printf("Nome do artigo %d: ", i+1);
+        scanf(" %[^\n]", nomes[i]);
+
+        printf("Preco do artigo %d: ", i+1);
+        scanf("%f", &precos[i]);
+
+        printf("Percentual de desconto do artigo %d (ex: 10 para 10%%): ", i+1);
+        scanf("%f", &descontos[i]);
+
+        precosComDesconto[i] = precos[i] * (1 - descontos[i] / 100.0f);
+        totalPagar += precosComDesconto[i];
+    }
+
+    printf("\nResumo da compra:\n");
+    for (i = 0; i < 4; i++) {
+        printf("Artigo: %s, Preco: R$ %.2f, Preco com desconto: R$ %.2f\n", nomes[i], precos[i], precosComDesconto[i]);
+    }
+    printf("Total a pagar: R$ %.2f\n", totalPagar);
+
+    return 0;
+}

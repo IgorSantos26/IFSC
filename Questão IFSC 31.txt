@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int A, B;
+
+    printf("Digite o valor de A: ");
+    scanf("%d", &A);
+
+    printf("Digite o valor de B: ");
+    scanf("%d", &B);
+
+    if (A > B) {
+        printf("Maior: %d\n", A);
+    } else if (B > A) {
+        printf("Maior: %d\n", B);
+    } else {
+        printf("Ambos sao iguais: %d\n", A);
+    }
+
+    return 0;
+}

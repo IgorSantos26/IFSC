@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    float salario_bruto, salario_previdencia, salario_imposto, salario_liquido;
+
+    printf("Digite o salario bruto: ");
+    scanf("%f", &salario_bruto);
+
+    salario_previdencia = salario_bruto * 0.10f;  // 10% de previdência
+    salario_imposto = (salario_bruto - salario_previdencia) * 0.05f;  // 5% sobre o restante
+
+    salario_liquido = salario_bruto - salario_previdencia - salario_imposto;
+
+    printf("Salario liquido: %.2f\n", salario_liquido);
+
+    return 0;
+}

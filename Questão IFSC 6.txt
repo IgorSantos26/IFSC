@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+int main() {
+    float soma = 10.0, x = 3.0;
+    char nome[] = "Joao";
+    char cor[] = "verde";
+    bool cod = true, teste = false, tudo;
+
+    // 1) teste = cod OU ((x)*2 <> soma)
+    teste = cod || (x * 2 != soma);
+    printf("1) teste = %s\n", teste ? "true" : "false");
+
+    // 2) tudo = soma (inválida, mas C permite)
+    // tudo = soma; // Comentado porque é conceitualmente errado para booleano
+
+    // 3) x = nome >= cor
+    x = strcmp(nome, cor) >= 0;
+    printf("3) x = %.0f (nome >= cor)\n", x);
+
+    // 4) cod = cor = 'verde'
+    cod = strcmp(cor, "verde") == 0;
+    printf("4) cod = %s\n", cod ? "true" : "false");
+
+    // 5) tudo = NÃO teste OU cod E (soma < x)
+    tudo = (!teste) || (cod && (soma < x));
+    printf("5) tudo = %s\n", tudo ? "true" : "false");
+
+    return 0;
+}

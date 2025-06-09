@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char nome[50];
+    char categoria;
+    float salario, reajuste, salarioReajustado;
+
+    printf("Nome do empregado: ");
+    scanf(" %[^\n]", nome);
+
+    printf("Categoria (letra maiuscula): ");
+    scanf(" %c", &categoria);
+    categoria = toupper(categoria);
+
+    printf("Salario atual: ");
+    scanf("%f", &salario);
+
+    if (categoria == 'A' || categoria == 'C' || categoria == 'F' || categoria == 'H') {
+        reajuste = 0.10f;
+    } else if (categoria == 'B' || categoria == 'D' || categoria == 'E' || categoria == 'I' || categoria == 'J' || categoria == 'T') {
+        reajuste = 0.15f;
+    } else if (categoria == 'K' || categoria == 'R') {
+        reajuste = 0.25f;
+    } else if (categoria == 'L' || categoria == 'M' || categoria == 'N' || categoria == 'O' || categoria == 'P' || categoria == 'Q' || categoria == 'S') {
+        reajuste = 0.35f;
+    } else if (categoria == 'U' || categoria == 'V' || categoria == 'X' || categoria == 'Y' || categoria == 'W' || categoria == 'Z') {
+        reajuste = 0.50f;
+    } else {
+        reajuste = 0.0f;
+        printf("Categoria invalida. Sem reajuste.\n");
+    }
+
+    salarioReajustado = salario * (1 + reajuste);
+
+    printf("Nome: %s\n", nome);
+    printf("Categoria: %c\n", categoria);
+    printf("Salario reajustado: R$ %.2f\n", salarioReajustado);
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int data, D, M, A;
+
+    printf("Digite a data no formato DDMMAA (sem barras): ");
+    scanf("%d", &data);
+
+    D = data / 10000;          // dois primeiros dígitos (dia)
+    M = (data / 100) % 100;   // dois próximos dígitos (mês)
+    A = data % 100;           // dois últimos dígitos (ano)
+
+    printf("Data no formato AAMMDD: %02d%02d%02d\n", A, M, D);
+
+    return 0;
+}

@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int valorCompra, valorPago, troco;
+    int notas100, notas10, notas1;
+
+    printf("Valor da compra: ");
+    scanf("%d", &valorCompra);
+
+    printf("Valor pago: ");
+    scanf("%d", &valorPago);
+
+    if (valorPago < valorCompra) {
+        printf("Pagamento insuficiente!\n");
+        return 1;
+    }
+
+    troco = valorPago - valorCompra;
+
+    notas100 = troco / 100;
+    troco %= 100;
+
+    notas10 = troco / 10;
+    troco %= 10;
+
+    notas1 = troco;
+
+    printf("Valor da compra: %d\n", valorCompra);
+    printf("Valor do troco: %d\n", valorPago - valorCompra);
+    printf("Notas de 100: %d\n", notas100);
+    printf("Notas de 10: %d\n", notas10);
+    printf("Notas de 1: %d\n", notas1);
+
+    return 0;
+}

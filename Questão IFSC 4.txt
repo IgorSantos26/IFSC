@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+void imprimeResultado(const char* expressao, int resultado) {
+    printf("%s: %s\n", expressao, resultado ? "VERDADEIRO" : "FALSO");
+}
+
+int main() {
+    // a) 6 <= 7
+    imprimeResultado("a) 6 <= 7", 6 <= 7);
+
+    // b) sqrt(64) > 5 * 2
+    imprimeResultado("b) sqrt(64) > 5 * 2", sqrt(64) > 5 * 2);
+
+    // c) \"Pseudocódigo\" < \"PSEUDOCÓDIGO\"
+    imprimeResultado("c) \"Pseudocódigo\" < \"PSEUDOCÓDIGO\"", strcmp("Pseudocódigo", "PSEUDOCÓDIGO") < 0);
+
+    // d) 3 + 5 <= 2 * 4
+    imprimeResultado("d) 3 + 5 <= 2 * 4", 3 + 5 <= 2 * 4);
+
+    // e) \"Pseudocódigo\" > \"turbo\"
+    imprimeResultado("e) \"Pseudocódigo\" > \"turbo\"", strcmp("Pseudocódigo", "turbo") > 0);
+
+    return 0;
+}
